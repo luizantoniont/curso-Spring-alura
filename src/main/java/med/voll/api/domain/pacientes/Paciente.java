@@ -1,4 +1,4 @@
-package med.voll.api.pacientes;
+package med.voll.api.domain.pacientes;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.domain.endereco.Endereco;
 
 @Getter
 @EqualsAndHashCode(of = "id")
@@ -55,7 +55,7 @@ public void atualizarInformacoes(DadosAtualizacaoPaciente dados) {
         endereco.atualizarInformacoes(dados.endereco());
 }
 
-public void inativar() {
+public void excluir() {
     this.ativo = false;
 }
     
